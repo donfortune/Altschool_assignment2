@@ -1,0 +1,292 @@
+/* css Reset*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+
+
+  #root, #__next {
+    isolation: isolate;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* @media only screen and (min-width: 1200px) { */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8rem;
+    width: 100%;
+    height: 100vh;
+    font-family: "Sofia Sans", sans-serif;
+    background: #f7fdfc;
+  }
+  
+  .left-side,
+  .right-side {
+    width: 50%;
+    max-width: 600px;
+  }
+  
+  
+  .left-side {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .left-side img {
+    width: 77px;
+    height: 80px;
+    margin-left: -0.5rem;
+  }
+  
+  .left-side h2 {
+    font-family: "Brown-Bold", "Sofia Sans", sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3.125rem;
+    letter-spacing: -0.05rem;
+    margin: 1.5rem 0 2.5rem;
+  }
+  
+  .left-side p {
+    color: #737373;
+    font-family: "Brown-Light", "Sofia Sans", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 1.5625rem;
+    max-width: 80%;
+  }
+  
+  .mobile-descri {
+    visibility: hidden;
+  }
+  
+  
+  .right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
+    border-radius: 0.375rem;
+    background: #fff;
+    box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .table-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    position: relative;
+  }
+  
+  .table-info label {
+    display: block;
+    color: #011c34;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.00625rem;
+  }
+  
+  .table-info input,
+  .table-info select {
+    outline: none;
+    padding: 0.7rem 1rem;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem; 
+    letter-spacing: 0.0125rem;
+    border: 1px solid;
+    border-radius: 4px;
+  }
+  
+  .table-info input:focus,
+  .table-info select:focus {
+    border: 1px solid #2ec4b6;
+  }
+
+  
+  .cal-icon {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  
+  .show-password {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+  
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #2ec4b6;
+    filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.1));
+  
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.0125rem;
+  }
+  
+  .terms {
+    text-align: center;
+    color: #000;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5625rem;
+  }
+  
+  .terms a {
+    color: #2ec4b6;
+  }
+  
+  .mobile-terms {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 1300px) {
+    main {
+      padding: 0 4rem;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    main {
+      padding: 0 2rem;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      padding: 2rem 2rem;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .left-side,
+    .right-side {
+      width: 100%;
+      max-width: 600px;
+    }
+  
+    .left-side h2 {
+      line-height: 3.125rem; 
+      margin: 0;
+    }
+  
+    .left-side p {
+      max-width: 100%;
+    }
+  
+    .desktop-descri {
+      display: none;
+    }
+  
+    .mobile-descri {
+      visibility: visible;
+      margin: 0.75rem 0 2.5rem;
+    }
+  
+    .right-side {
+      padding: 1.5rem 1rem;
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .desktop-terms {
+      display: none;
+    }
+  
+    .mobile-terms {
+      display: block;
+      margin: 1rem 0;
+    }
+  }
